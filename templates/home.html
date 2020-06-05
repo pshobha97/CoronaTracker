@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Covid19-Tracker</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light text-white ">
+  <a class="navbar-brand text-white" href="#">Covid19-Tracker</a>
+  <button class="navbar-toggler text-white " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mytoggle ">
+      <li class="nav-item active ">
+        <a class="nav-link text-white" href="#">Home </a>
+      </li>
+        <li class="nav-item active">
+        <a class="nav-link text-white" href="/about">About </a>
+      </li>
+        <li class="nav-item active">
+        <a class="nav-link text-white" href="/contact">Contact </a>
+      </li>
+
+
+    </ul>
+
+  </div>
+
+</nav>
+<div class="container-fluid " >
+  <div class="container world_container text-center">
+    <div class="heading"><h1 class="h1">Covid19-Tracker World-Wide</h1></div>
+    <div class="world_record">
+      <div class="row world_row">
+        <div class="col-md-3">
+<div class="card border-primary mb-3 primary" style="max-width: 18rem;">
+  <div class="card-header text-white actives" >New Cases</div>
+  <div class="card-body text-primary">
+    <h5 class="card-title">{{world_newcase}}</h5>
+
+  </div>
+</div>
+      <div class="card border-danger mb-3 danger " style="max-width: 18rem;">
+  <div class="card-header text-white confirm">Confirmed Cases</div>
+  <div class="card-body text-danger">
+    <h5 class="card-title">{{world_confirm}}</h5>
+
+  </div>
+</div>
+      <div class="card border-secondary mb-3 secondary" style="max-width: 18rem;">
+  <div class="card-header text-white death">Death</div>
+  <div class="card-body text-secondary">
+    <h5 class="card-title">{{world_death}}</h5>
+
+  </div>
+</div>
+        </div>
+        <div class="col-md-9 bg-image">
+
+      <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary search_container " data-toggle="modal" data-target="#world-data">
+  Click Here For Countries <img height="17px" width="17px" src="{{ url_for('static', filename='css/images/go.webp') }}">
+</button>
+
+<!-- Modal -->
+<div class="modal fade " id="world-data" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Other Countries data</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body ">
+
+
+          <table id="classTable" class="table table-bordered table-hover table-striped table-dark">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">S.No</th>
+      <th scope="col">Country</th>
+      <th scope="col">Total Cases</th>
+      <th scope="col">New Cases</th>
+      <th scope="col">Total Deaths</th>
+      <th scope="col">New Deaths</th>
+      <th scope="col">Total Recovered</th>
+      <th scope="col">Active Cases</th>
+    </tr>
+  </thead>
+  <tbody >
+ {%for country in countries%}
+  <tr>
+    {%for data in country %}
+    <td>{{data}}</td>
+    {% endfor %}
+  </tr>
+  {% endfor %}
+
+
+
+  </tbody>
+    </table>
+<!--        <form class="form-inline my-2 my-lg-0" action="/otherCountires" method="GET">-->
+<!--<button type="submit" class="btn btn-success ">Other Countries Record</button>-->
+<!--</form>-->
+      </div>
+      <div class="container text-center">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+
+      </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+
+
+
+    </div>
+
+
+  </div>
+
+<div class="container india_container">
+<div class="head_container container">
+<h3 class="text-center">Covid19-India-Tracker</h3>
+<br>
+   <div class="container time text-center">
+    <strong>{{time}}</strong>
+  </div>
+<div class="container">
+  <div class="row container-fluid">
+    <div class="col-md-2">
+      <div class="card rounded">
+        <div class="card-header confirm"><strong>Confirmed</strong> </div>
+          <div class="card-body text-center">
+            <div class="card-title " style="color:red"><strong>{{data.data4}}</strong></div>
+        </div>
+        <div class="card-footer confirm"></div>
+      </div>
+      </div>
+      <div class="col-md-2">
+      <div class="card rounded">
+        <div class="card-header actives"><strong>Active</strong> </div>
+          <div class="card-body text-center">
+            <div class="card-title " style="color:blue;"><strong>{{data.data0}}</strong></div>
+        </div>
+        <div class="card-footer actives"></div>
+      </div>
+
+      </div>
+        <div class="col-md-2">
+      <div class="card rounded">
+        <div class="card-header recovered"><strong>Recovered</strong> </div>
+          <div class="card-body text-center">
+            <div class="card-title" style="color:green;"><strong>{{data.data1}}</strong></div>
+        </div>
+        <div class="card-footer recovered"></div>
+      </div>
+      </div>
+          <div class="col-md-2">
+      <div class="card rounded">
+        <div class="card-header death"><strong>Death</strong> </div>
+          <div class="card-body text-center">
+            <div class="card-title" style="color:black;"><strong>{{data.data2}}</strong></div>
+        </div>
+        <div class="card-footer death"></div>
+      </div>
+      </div>
+    <div class="col-md-2">
+      <div class="card rounded text-center">
+        <div class="card-header migrate"><strong>Migrated</strong> </div>
+          <div class="card-body text-center">
+            <div class="card-title" style="color:orange;"><strong>{{data.data3}}</strong></div>
+        </div>
+        <div class="card-footer migrate"></div>
+      </div>
+      </div>
+
+    </div>
+
+
+  </div>
+
+</div>
+  </div>
+  <div class="container main_container mt-50">
+  <table class="table table-hover table-striped table-dark">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">S.No</th>
+      <th scope="col">State</th>
+      <th scope="col">Active</th>
+      <th scope="col">Recovered</th>
+      <th scope="col">Death</th>
+      <th scope="col">Total Confirmed</th>
+    </tr>
+  </thead>
+  <tbody >
+  {%for record in records%}
+  <tr>
+    {%for data in record%}
+    <td>{{data}}</td>
+    {% endfor %}
+
+  </tr>
+  {% endfor %}
+  </tbody>
+    </table>
+  </div>
+</div>
+<footer id="">
+  <div class="footer-copyright text-center py-3 bg-dark">© 2020 Copyright:  <a> @PShobha  </a><a href="https://www.facebook.com/p.shobha.129" target="_blank" class="a_f"><i class="fa fa-facebook"></i></a>
+
+    <a href="https://www.linkedin.com/in/p-shobha-a35158160/" target="_blank" class="a_f"><i class="fa fa-linkedin"></i></a>
+    <a href="https://github.com/pshobha97" target="_blank" class="a_f"><i class="fa fa-github"></i></a> </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>

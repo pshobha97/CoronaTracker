@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light text-white ">
+  <a class="navbar-brand text-white" href="#">Covid19-Tracker</a>
+  <button class="navbar-toggler text-white " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mytoggle ">
+      <li class="nav-item active ">
+        <a class="nav-link text-white" href="/home">Home </a>
+      </li>
+        <li class="nav-item active">
+        <a class="nav-link text-white" href="#">About </a>
+      </li>
+        <li class="nav-item active">
+        <a class="nav-link text-white" href="/contact">Contact </a>
+      </li>
+
+
+    </ul>
+
+  </div>
+
+</nav>
+<div class=" container-fluid  " >
+    <div class="container text-center"><strong><h1>ABOUT CORONA</h1></strong></div>
+    <div  class="row">
+        <div class="col-md-6 ">
+            <div class="rounded text-center about">
+        <strong><h3>What is Covid-19?</h3></strong>
+          <div class="card-body text-center">
+            <div class="card-title " ><strong>
+
+                <p class="text-justify text-white">A coronavirus is a kind of common virus that causes an infection in your nose, sinuses, or upper throat. Most coronaviruses aren't dangerous.
+
+In early 2020, after a December 2019 outbreak in China, the World Health Organization identified SARS-CoV-2 as a new type of coronavirus. The outbreak quickly spread around the world.
+
+COVID-19 is a disease caused by SARS-CoV-2 that can trigger what doctors call a respiratory tract infection. It can affect your upper respiratory tract (sinuses, nose, and throat) or lower respiratory tract (windpipe and lungs).
+<br>
+It spreads the same way other coronaviruses do, mainly through person-to-person contact. Infections range from mild to deadly.
+
+SARS-CoV-2 is one of seven types of coronavirus, including the ones that cause severe diseases like Middle East respiratory syndrome (MERS) and sudden acute respiratory syndrome (SARS). The other coronaviruses cause most of the colds that affect us during the year but aren’t a serious threat for otherwise healthy people.</p>
+            </strong></div>
+        </div>
+
+      </div>
+        </div>
+        <div class="col-md-6">
+            <img src="{{url_for('static', filename='css/images/corona3.webp')}}" alt="corona"  align="middle" class="card-image image_right" />
+
+        </div>
+
+    </div>
+<div  class="row">
+     <div class="col-md-6">
+            <img src="{{url_for('static', filename='css/images/symptom.jpg')}}" alt="symptoms" align="middle" class="card-image image_left" />
+
+        </div>
+        <div class="col-md-6 ">
+            <div class="rounded text-center about">
+        <strong><h3>Symptoms of Covid-19 </h3></strong>
+          <div class="card-body text-center">
+            <div class="card-title " ><strong>
+
+                <p class="text-justify text-white">The main symptoms include:
+</p>
+                <ul class="text-justify">
+                    <li>Fever</li>
+                    <li>Shortness of breath</li>
+                    <li>Trouble breathing</li>
+                    <li>Fatigue</li>
+                    <li>Chills, sometimes with shaking</li>
+                    <li>Body aches</li>
+                    <li>Headache</li>
+                    <li>Sore throat</li>
+                    <li>Loss of smell or taste</li>
+                    <li>Nausea</li>
+                    <li>Coughing</li>
+                    <li>Diarrhea</li>
+
+                </ul>
+                <p class="text-justify">
+                    The virus can lead to pneumonia, respiratory failure, septic shock, and death. Many COVID-19 complications may be caused by a condition known as cytokine release syndrome or a cytokine storm. This is when an infection triggers your immune system to flood your bloodstream with inflammatory
+                    proteins called cytokines. They can kill tissue and damage your organs.
+                    If you’re infected, symptoms can show up in as few as 2 days or as many as 14. It varies from person to person.
+
+                </p>
+            </strong></div>
+        </div>
+
+      </div>
+        </div>
+
+
+    </div>
+    <div  class="row">
+        <div class="col-md-6 ">
+            <div class="rounded text-center about">
+        <strong><h3>How does the coronavirus spread?</h3></strong>
+          <div class="card-body text-center">
+            <div class="card-title "><strong>
+
+                <p class="text-justify text-white">Most of the time, it spreads when a sick person coughs or sneezes. They can spray droplets as far as 6 feet away. If you breathe them in or swallow them, the virus can get into your body. Some people who have the virus don't have symptoms, but they can still spread the virus.
+
+You can also get the virus from touching a surface or object the virus is on, then touching your mouth, nose, or possibly your eyes. Most viruses can live for several hours on a surface that they land on. A study shows that SARS-CoV-2 can last for several hours on various types of surfaces:
+</p>
+                <ul class="text-justify">
+                    <li>Copper: 4 hours</li>
+                    <li>Cardboard: up to 24 hours</li>
+                    <li>Plastic or stainless steel: 2 to 3 days</li>
+
+                </ul>
+                <p class="text-justify">
+                    That’s why it’s important to disinfect surfaces to get rid of the virus.
+
+Some dogs and cats have tested positive for the virus. A few have shown signs of illness. But there’s no evidence that humans can catch this coronavirus from an animal.
+                </p>
+            </strong></div>
+        </div>
+
+      </div>
+        </div>
+        <div class="col-md-6">
+            <img src="{{url_for('static', filename='css/images/spread.jpg')}}" alt="spread" align="middle" class="card-image image_right" />
+
+        </div>
+
+    </div>
+    <div  class="row">
+        <div class="col-md-6">
+            <img src="{{url_for('static', filename='css/images/prevention.png')}}"  alt="prevention" align="middle" class="card-image image_left" />
+
+        </div>
+        <div class="col-md-6 ">
+            <div class="rounded text-center about">
+        <strong><h3>Coronavirus Prevention</h3></strong>
+          <div class="card-body text-center">
+            <div class="card-title " ><strong>
+
+                <p class="text-justify text-white">Take these steps:</p>
+                <ul class="text-justify">
+                    <li><h4>Wash your hands often with soap and water or clean them with an alcohol-based sanitizer.</h4> This kills viruses on your hands.</li>
+                    <li><h4>Practice social distancing.</h4> Because you can have and spread the virus without knowing it, you should stay home as much as possible. If you do have to go out, stay at least 6 feet away from others.</li>
+                    <li><h4>Cover your nose and mouth in public.</h4> If you have COVID-19, you can spread it even if you don’t feel sick. Wear a cloth face covering to protect others. This isn’t a replacement for social distancing. You still need to keep a 6-foot distance between yourself and those around you.</li>
+                    <li><h4>Don’t touch your face.</h4> Coronaviruses can live on surfaces you touch for several hours. If they get on your hands and you touch your eyes, nose, or mouth, they can get into your body.</li>
+                    <li><h4>Clean and disinfect.</h4> You can clean first with soap and water, but disinfect surfaces you touch often, like tables, doorknobs, light switches, toilets, faucets, and sinks. Use a mix of household bleach and water (1/3 cup bleach per gallon of water, or 4 teaspoons bleach per quart of water) or a household cleaner that’s approved to treat SARS-CoV-2. You can check the Environmental Protection Agency (EPA) website to see if yours made the list. Wear gloves when you clean and throw them away when you’re done.</li>
+
+                </ul>
+
+            </strong></div>
+        </div>
+
+      </div>
+        </div>
+
+
+    </div>
+    <div  class="row">
+         <div class="col-md-6 ">
+            <div class="rounded text-center about">
+        <strong><h3>COVID-19 preparation tips </h3></strong>
+          <div class="card-body text-center">
+            <div class="card-title "><strong>
+
+                <p class="text-justify text-white">In addition to practicing the prevention tips listed above, you can:
+</p>
+                <ul class="text-justify">
+                    <li>Meet as a household or larger family to talk about who needs what.</li>
+                    <li>SIf you have people at a higher risk, ask their doctor what to do.</li>
+                    <li>Talk to your neighbors about emergency planning. Join your neighborhood chat group or website to stay in touch.</li>
+                    <li>Find community aid organizations that can help with health care, food delivery, and other supplies.</li>
+                    <li>Make an emergency contact list. Include family, friends, neighbors, carpool drivers, doctors, teachers, employers, and the local health department.</li>
+                    <li>Choose a room (or rooms) where you can keep someone who’s sick or who’s been exposed separate from the rest of you.</li>
+                    <li>Talk to your child’s school about keeping up with assignments.</li>
+                    <li>Set yourself up to work from home if your office is closed.</li>
+                    <li>Reach out friends or family if you live alone. Make plans for them to check on you by phone, email, or video chat.</li>
+
+
+                </ul>
+                <p class="text-justify">
+                    The virus can lead to pneumonia, respiratory failure, septic shock, and death. Many COVID-19 complications may be caused by a condition known as cytokine release syndrome or a cytokine storm. This is when an infection triggers your immune system to flood your bloodstream with inflammatory
+                    proteins called cytokines. They can kill tissue and damage your organs.
+                    If you’re infected, symptoms can show up in as few as 2 days or as many as 14. It varies from person to person.
+
+                </p>
+            </strong></div>
+        </div>
+
+      </div>
+        </div>
+        <div class="col-md-6">
+            <img src="{{url_for('static', filename='css/images/distancing.jpg')}}" alt="distancing" align="middle" class="card-image image_right" />
+
+        </div>
+
+
+
+    </div>
+
+</div>
+<footer id="">
+  <div class="footer-copyright text-center py-3 bg-dark">© 2020 Copyright:  <a> @PShobha  </a><a href="https://www.facebook.com/p.shobha.129" target="_blank" class="a_f"><i class="fa fa-facebook"></i></a>
+
+    <a href="https://www.linkedin.com/in/p-shobha-a35158160/" target="_blank" class="a_f"><i class="fa fa-linkedin"></i></a>
+    <a href="https://github.com/pshobha97" target="_blank" class="a_f"><i class="fa fa-github"></i></a> </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
